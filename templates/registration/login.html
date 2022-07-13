@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<section class="book_section layout_padding">
+	<div class="container">
+		<div class="heading_container">
+			<h2 style="color: white;">
+				Stay your message here
+			</h2>
+			<br>
+		</div>
+		<div class="row">
+			<div class="col-md-6">
+				<div class="form_container">
+
+					<form method="post">{% csrf_token %}
+						<h2>Login</h2>
+
+						<p>
+							<label for="id_username">Username:</label>
+							<input class='form-control' placeholder="Username" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+							
+							
+						</p>
+
+						
+						<p>
+							<label for="id_password">Password:</label>
+							<input class='form-control' placeholder="Username" type="password" name="password" autocomplete="current-password" required="" id="id_password">
+							
+							
+							
+							
+						</p>
+						<button type="submit">Login</button>
+					</form>
+
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% endblock content %}

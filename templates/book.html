@@ -1,0 +1,44 @@
+{% extends 'base.html' %}  
+
+{% block content %}  
+
+
+<!-- book section -->
+  <section class="book_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2 style="color: white;">
+          Stay your message here
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form_container">
+            <form method="post"> {% csrf_token %}
+              <div>
+                <input type="text" name ='Name' class="form-control" placeholder="Your Name" />
+              </div>
+              <div>
+                <input type="text" name ='Number' class="form-control" placeholder="Phone Number" />
+              </div>
+              <div>
+                <input type="email" name ='Email' class="form-control" placeholder="Your Email" />
+              </div>
+              <div>
+                <input type="text" name ='Message' class="form-control" placeholder="Your Message" />
+              </div>
+              <div>
+              <div class="btn_box">
+                <button>
+                  Send
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end book section -->
+
+{% endblock content %}
