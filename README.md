@@ -1,4 +1,4 @@
-# Fast_food_site_on_django
+# Fast_food_web_site_on_django
 
 Website works on sqlite3 database structure.
 
