@@ -1,0 +1,124 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="{% static 'js/carts.js' %}"></script>
+    <title>Shopping Cart UI</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/cart1.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style_2.css' %}">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,900" rel="stylesheet">
+
+    <script type="text/javascript"> 
+  var user = '{{ request.user }}'
+
+  function getToken(name) {
+  var cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+var csrftoken = getToken('csrftoken');
+  </script>
+
+
+</head>
+<body style="background-color: white">
+   <div class="CartContainer" style=" margin-top: 20px">
+       <div class="Header">
+        <h3 class="Heading"> </h3>
+        <h5 data-product="{{ item.product.id }}" data-action="delete" class="chg-quantity update-cart"
+        style=" margin-right: -50px; font-size: 34px; font-family: 'Open Sans'; font-weight: 600;
+        color: #E44C4C; cursor: pointer; border-bottom: 1px solid #E44C4C;">Remove all</h5>
+       </div>
+       {% for item in items %}
+       <div class="Cart-Items">
+          <div class="image-box" style="margin-right: 30px;">
+            <img src="{{ item.product.Image.url }}" width="270px" height="190px" />
+          </div>
+          <div class="about" style="margin-bottom: -100px">
+            <h1 class="">{{ item.product.Name }}</h1>
+            <h3 class="subtitle"></h3>
+            <img src=""/>
+          </div>
+          <div class="counter">
+            <div class="btn" ><img data-product="{{ item.product.id }}" width="20px" data-action="add" class="chg-quantity update-cart" src="{% static 'images/plus1.png' %}"></div>
+            <div class="count">{{ item.quantity }}</div>
+            <div class="btn"><img data-product="{{ item.product.id }}" width="20px" data-action="remove"  class="chg-quantity update-cart" src="{% static 'images/minus.png' %}"></div>
+          </div>
+          <div class="prices">
+            <div class="amount">UZS {{ item.product.Price }}</div>
+            <div data-product="{{ item.product.id }}" data-action="delete" class="chg-quantity update-cart" 
+            style="color: #36C744; padding-top: 5px; font-size: 14px; font-family: 'Open Sans'; font-weight: 600; 
+            cursor: pointer;">
+              <u>Save for later</u></div>
+            <div data-product="{{ item.product.id }}" data-action="delete" class="chg-quantity update-cart"
+            style="padding-top: 5px; font-size: 14px; font-family: 'Open Sans'; font-weight: 600; color: #E44C4C;
+            cursor: pointer;"><u>Remove</u></div>
+          </div>
+       </div>
+       <br>
+       {% endfor %}
+     <hr> 
+     <div class="checkout">
+     <div class="total">
+        <div>
+            <div class="Subtotal" style="margin-top: 15px; font-size: 25px; font-weight: 900;">Sub-Total</div>
+            <div style="color: white;background-color: #202020; border-radius: 50px; width: 55px; 
+            height: 25px; padding-top: 8px; margin-top: 10px;
+            text-align: center;">{{ order.get_cart_items }}</div>
+        </div>
+        <div class="total-amount" style="margin-bottom: 50px;padding-top: 10px;margin-left: 10px; font-size: 42px;">UZS {{ order.get_cart_total }}
+        </div>
+        
+     </div>
+     
+     
+   </div>
+   <button class="check-out">Checkout</button>
+           <style type="text/css">
+          .check-out {
+            font-family: 'Open Sans';
+            font-weight: 700;
+            text-align: center;
+            font-size: 35px;
+            width: 320px;
+            height: 100px;
+            margin-top: 20px;
+            margin-left: 250px;
+            cursor: pointer;
+            border: 1px solid;
+            padding: 10px;
+            box-shadow: 1px 5px 10px #fa2048;
+            display: inline-block;
+            padding: 10px 45px;
+            background-color: #FF375B;
+            color: #ffffff;
+            border-radius: 45px;
+            -webkit-transition: all 0.3s;
+            transition: all 0.3s;
+            border: none;
+          }
+
+          .check-out:hover {
+            background-color: #fa2048;
+
+          }
+        </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'js/carts.js' %}"></script>
+</body>
+</html>

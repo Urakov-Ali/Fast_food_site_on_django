@@ -1,45 +1,78 @@
-{% extends 'base.html' %}
+{% load static %}
 
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="">
 
+  <title> Max-Burger </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css" integrity="sha512-CruCP+TD3yXzlvvijET8wV5WxxEh5H8P4cmz0RFbKK6FlZ2sYl3AEsKlLPHbniXKSrDdFewhbmBK5skbdsASbQ==" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- css files created by backend dev -->
+  <link href="{% static 'css/style_2.css' %}" rel="stylesheet" type="text/css" />
+  <link href="{% static 'css/view.css' %}" rel="stylesheet" type="text/css" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css"/>
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" /> 
+</head>
+
+  <div class="bg-box-header"></div>
+  <!-- end header section -->
+
+
+<!-- book section -->
 <section class="book_section layout_padding">
 	<div class="container">
 		<div class="heading_container">
-			<h2 style="color: white;">
-				Stay your message here
+			<h2 style="color: white">
+				Войдите в свой профиль
 			</h2>
-			<br>
 		</div>
 		<div class="row">
 			<div class="col-md-6">
 				<div class="form_container">
+					<form method="post"> {% csrf_token %}
 
-					<form method="post">{% csrf_token %}
-						<h2>Login</h2>
+						<p style="color: white">
 
-						<p>
-							<label for="id_username">Username:</label>
-							<input class='form-control' placeholder="Username" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
-							
-							
+							<label for="id_username">Имя пользователя:</label>
+							<input class ="form-control" placeholder="Имя" type="text" name="username" autofocus="" autocapitalize="none" autocomplete="username" maxlength="150" required="" id="id_username">
+
 						</p>
 
-						
-						<p>
-							<label for="id_password">Password:</label>
-							<input class='form-control' placeholder="Username" type="password" name="password" autocomplete="current-password" required="" id="id_password">
-							
-							
-							
-							
+						<p style="color: white">
+
+							<label for="id_password">Пароль пользователя:</label>
+							<input class="form-control" placeholder="пароль" type="password" name="password" autocomplete="current-password" required="" id="id_password">
+
 						</p>
-						<button type="submit">Login</button>
+
+						<button class="add-to-cart" type="submit">Авторизоваться</button>
+
 					</form>
-
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
-
-{% endblock content %}
+<!-- end book section -->

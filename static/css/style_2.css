@@ -1,0 +1,193 @@
+.add-to-cart {
+  cursor: pointer;
+  border: 1px solid;
+  padding: 10px;
+  box-shadow: 1px 5px 10px #fa2048;
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #FF375B;
+  color: #ffffff;
+  border-radius: 45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-top: 10px;
+}
+
+.add-to-cart:hover {
+  background-color: #fa2048;
+
+}
+
+.add-to-cart1 {
+  border: 1px solid;
+  padding: 10px;
+  display: inline-block;
+  padding: 10px 45px;
+  background-color: #FF375B;
+  color: #ffffff;
+  border-radius: 45px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  border: none;
+  margin-left: -30px;
+  margin-top: 10px;
+}
+
+.add-to-cart1:hover {
+  background-color: #fa2048;
+}
+
+.cover-menu{
+  display: flex;
+  justify-content: space-between;
+  border-radius: 5px;
+  background-color: #36C744;
+  width: 100%;
+  height: 350px;
+}
+#btn-add{
+  background-color: #FF375B;
+}
+
+.menu {
+  margin-top: 35px;
+  margin-right: 100px;
+  width:250px;
+  height: 300px;
+}
+
+.our-menu {
+  margin-top: 130px;
+  margin-left: 100px;
+  padding: 10px 15px;
+  width: 70%;
+  border-radius: 50px;
+  font-size: 30px;
+  color: white;
+  background-color: #FF375B;
+  box-shadow: 2px 10px 18px #fa2048;
+  text-align: center;
+}
+
+.our-menu:hover {
+  background-color: #fa2048;
+}
+
+/* Style The Dropdown Button */
+.dropbtn {
+    display: inline-block;
+    padding: 10px 45px;
+    background-color: #ffbe33;
+    color: #ffffff;
+    border-radius: 45px;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    border: none;
+    margin-top: 10px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  min-width: 150px;
+ /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);*/
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  border-radius: 45px;
+
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  margin-top: 20px;
+  padding-left: 20px;
+  text-align: center;
+  background-color:  #FF375B;
+  color:  white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+
+
+
+#soz{
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+  }
+
+
+
+#cart-icon{
+  margin-bottom: -50px;
+  width:70px;
+  display: inline-block;
+  margin-left: 15px;
+  color: red;
+
+}
+
+#cart-total{
+  text-align: center;
+  color:#fff;
+  background-color: red;
+  width: 30px;
+  height: 28px;
+  border-radius: 50%;
+  font-size: 16px;
+}
+
+.box-frame{
+  width: 70%;
+  height: 200px;
+}
+
+.our-menu-word {
+  width: 119%;
+  display: inline;
+  color:white; 
+  background-color: #FF375B; 
+  padding: 10px 15px; 
+  border-radius: 20px;"
+}
+        
+
+.boxi2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255,55,108,1);
+  background: -moz-linear-gradient(-45deg, rgba(255,55,108,1) 0%, rgba(224,126,178,1) 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(255,55,108,1)), color-stop(100%, rgba(224,126,178,1)));
+  background: -webkit-linear-gradient(-45deg, rgba(255,55,108,1) 0%, rgba(224,126,178,1) 100%);
+  background: -o-linear-gradient(-45deg, rgba(255,55,108,1) 0%, rgba(224,126,178,1) 100%);
+  background: -ms-linear-gradient(-45deg, rgba(255,55,108,1) 0%, rgba(224,126,178,1) 100%);
+  background: linear-gradient(135deg, rgba(255,55,108,1) 0%, rgba(224,126,178,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff376c', endColorstr='#e07eb2', GradientType=1 );  
+}   

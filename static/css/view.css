@@ -1,0 +1,19 @@
+.modal-header {
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+}
+
+.modal-dialog {
+  max-width: 250px;
+}
+
+.modal-content {
+  width: 139%;
+}
+
+.close {
+  position: absolute;
+  top: ;
+  right: 16px;
+}  
